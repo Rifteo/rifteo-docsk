@@ -1,0 +1,121 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Rifteo",
+  "colors": {
+    "primary": "#D4AF37",
+    "light": "#E6C75A",
+    "dark": "#B8860B"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "pages": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "welcome",
+          "your-role",
+          "glossary"
+        ]
+      },
+      {
+        "group": "Your Audit Results",
+        "pages": [
+          "results",
+          "findings-dashboard",
+          "asset-inventory",
+          "responding-to-findings"
+        ]
+      },
+      {
+        "group": "Attack Surface Management",
+        "pages": [
+          "what-is-asm",
+          "activating-scans",
+          "scheduling-results"
+        ]
+      },
+      {
+        "group": "Teo AI",
+        "pages": [
+          "teo-recommendations"
+        ]
+      },
+      {
+        "group": "Reports",
+        "pages": [
+          "generating-reports",
+          "asm-reports"
+        ]
+      },
+      {
+        "group": "Your Account",
+        "pages": [
+          "dashboard",
+          "notifications",
+          "team-management",
+          "contact-support"
+        ]
+      },
+      {
+        "group": "What's New",
+        "pages": [
+          "changelog"
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Documentation",
+          "href": "https://mintlify.com/docs",
+          "icon": "book-open-cover"
+        },
+        {
+          "anchor": "Blog",
+          "href": "https://mintlify.com/blog",
+          "icon": "newspaper"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:hi@mintlify.com"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://app.mintlify.com"
+    }
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
+  },
+  "feedback": {
+    "thumbsRating": true
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/mintlify",
+      "github": "https://github.com/mintlify",
+      "linkedin": "https://linkedin.com/company/mintlify"
+    }
+  }
+}
