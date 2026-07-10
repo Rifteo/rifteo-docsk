@@ -7,7 +7,11 @@
     "light": "#E6C75A",
     "dark": "#B8860B"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/rifteo-logo light.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
   "navigation": {
     "pages": [
       {
@@ -18,7 +22,7 @@
         "group": "Your Audit Results",
         "pages": [
           "results",
-          "findings-dashboard",
+          "findings-dashboard", 
           "asset-inventory",
           "responding-to-findings"
         ]
