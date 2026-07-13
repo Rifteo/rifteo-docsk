@@ -7,7 +7,7 @@
     "light": "#E6C75A",
     "dark": "#B8860B"
   },
-  "favicon": "/rifteo-logo light.svg",
+  "favicon": "/rifteo-logo-light.svg",
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
@@ -58,7 +58,7 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:support@rifteo.app"
+        "href": "mailto:support@rifteo.fr"
       }
     ],
     "primary": {
