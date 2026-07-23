@@ -1,6 +1,94 @@
 ﻿---
-title: "Findings Dashboard"
-description: "Documentation for Findings Dashboard"
+title: "Reading the Findings Dashboard"
+description: "How to read and understand the findings from your audit — severity levels, scores, and what each status means."
 ---
 
-# Findings Dashboard
+Once your audit team publishes results, you'll see them in your **Findings Dashboard**. This page explains how to read that dashboard so you can quickly understand what was found, how serious each issue is, and what it means for you.
+
+## Finding Types
+
+Each finding is also categorized by **type**, which tells you what kind of security issue it is:
+
+| Type | What it means |
+|------|----------------|
+| **Vulnerability** | A weakness identified in your systems that could potentially be exploited by an attacker. |
+| **Exploitation** | Your audit team successfully exploited a vulnerability to demonstrate real, confirmed impact — not just a theoretical risk. |
+| **Threat Hypothesis** | A potential risk scenario identified by the audit team that hasn't been directly confirmed as exploitable, but is worth addressing as a precaution. |
+| **Observation** | Not a vulnerability — a note, best-practice suggestion, or point worth being aware of. |
+| **Achievement** | A security control or best practice that's already properly implemented — confirmed by your audit team. Not a problem, but useful to know what's already working well. |
+
+You can filter the dashboard by type using the **Type** filter above the findings list.
+
+<Tip>
+Findings of type **Achievement** typically have an **Info** severity — they highlight what's already secure, not what needs fixing.
+</Tip>
+
+<Frame>
+  <img src="/images/findings-dashboard-overview.png" alt="Rifteo Findings Dashboard" noZoom />
+</Frame>
+
+## Severity Levels
+
+Every finding is assigned a severity level, so you can quickly understand how urgent it is.
+
+| Severity | What it means | Example |
+|----------|---------------|---------|
+| **Critical** | Could let an attacker take full control of a system or access highly sensitive data right now. Needs immediate attention. | An exposed admin panel with no password protection. |
+| **High** | A serious weakness that's likely exploitable and could lead to real damage. | A login page vulnerable to password-guessing attacks. |
+| **Medium** | A real issue, but harder to exploit or with more limited impact. | Missing security headers that make certain attacks easier. |
+| **Low** | A minor weakness, unlikely to cause harm on its own. | Outdated software version with no known active exploit. |
+| **Info** | Not a vulnerability, but worth knowing — a best-practice suggestion. | Recommendation to enable additional logging. |
+
+## CVSS Scores
+
+Alongside severity, you may also see a **CVSS score** — a number from 0 to 10 that measures how severe a vulnerability is.
+
+- **0.1 – 3.9** → Low
+- **4.0 – 6.9** → Medium
+- **7.0 – 8.9** → High
+- **9.0 – 10.0** → Critical
+
+You don't need to calculate this yourself — Rifteo shows it automatically next to each finding. Think of it as a more precise version of the severity label: two "High" findings might have different CVSS scores depending on exactly how easy they are to exploit.
+
+## Draft vs Published
+
+Findings go through two stages:
+
+- **Draft** — Your audit team is still reviewing and confirming the finding. Drafts are private and only visible to the audit team.
+- **Published** — The finding has been reviewed and confirmed. You'll only ever see **Published** findings in your dashboard — this ensures you're never shown an issue before it's been verified.
+
+<Note>
+If a finding isn't showing up yet, it may still be in Draft. Your audit team is likely still confirming the details before publishing it.
+</Note>
+
+## Understanding Recommendations, Risks & Compliance
+
+Each published finding includes more than just a description of the problem:
+
+- **Recommendation** — practical guidance from your audit team on how to fix the issue
+- **Risk** — a plain-English explanation of what could happen if the issue isn't addressed
+- **Compliance** — where relevant, which standards or regulations the finding relates to (e.g. GDPR, ISO 27001), so you can prioritize based on your compliance needs
+
+This context is there to help you and your technical team decide what to fix first.
+
+<Note>
+Direct remediation actions (such as marking a finding as resolved) are currently being redesigned and aren't available yet.
+If you have a question or concern about a specific finding, you can leave a comment on the audit thread to communicate directly with your audit team.
+</Note>
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Why can't I see a finding my auditor mentioned?">
+    It's likely still in **Draft** status. Findings only appear in your dashboard once they've been reviewed and published.
+  </Accordion>
+  <Accordion title="What should I fix first?">
+    Start with **Critical** and **High** severity findings — these carry the greatest risk. The CVSS score can help you prioritize further within the same severity level.
+  </Accordion>
+  <Accordion title="Can I mark a finding as resolved myself?">
+    Not yet — this feature is currently being redesigned. In the meantime, you can leave a comment on the audit thread to update your audit team.
+  </Accordion>
+  <Accordion title="What if I disagree with a finding's severity?">
+    Leave a comment on the audit thread explaining your reasoning — your audit team can review and clarify.
+  </Accordion>
+</AccordionGroup>
